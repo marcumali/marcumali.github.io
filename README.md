@@ -1,2 +1,1 @@
-# marcumali.github.io
-Display Knowledge And Skills
+# macumali.github.io

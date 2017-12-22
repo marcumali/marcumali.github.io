@@ -1,0 +1,90 @@
+.btn{
+	@include border-radius( 0 );
+	@include transition( all,0.3s );
+
+	font-family: $font-family-base;
+	padding: 10px 30px;
+
+	&:focus,
+	&:active,
+	&:hover,
+	&:active:focus{
+		background-color: transparent;
+		box-shadow: none;
+		color: #ffffff;
+		outline: none;
+	}
+
+	span{
+		font-family: $font-family-base;
+
+		position: absolute;
+	}
+
+}
+
+.btn-primary{
+
+	background-color: $primary-color;
+	border: 1px solid $primary-color;
+	color: #ffffff;
+	text-transform: uppercase;
+
+	&:hover{
+		background-color: #ffffff;
+		border: 1px solid #ffffff;
+		color: $primary-color;
+	}
+
+	&:active,
+	&:focus{
+		background-color: #ffffff;
+		border: 1px solid #ffffff;
+	}
+
+}
+
+.btn-secondary{
+
+	background-color: #ffffff;
+	border: 1px solid #ffffff;
+	color: $primary-color;
+	text-transform: uppercase;
+
+	&:hover{
+		background-color: $primary-color;
+		border: 1px solid $primary-color;
+		color: #ffffff;
+	}
+
+	&:active,
+	&:focus{
+		background-color: $primary-color;
+		border: 1px solid $primary-color;
+	}
+
+}
+
+.btn-action{
+
+	display: inline-block;
+
+	span{
+		color: #ffffff;
+		font-family: $font-family-base;
+		text-transform: uppercase;
+	}
+
+	a{
+		display: block;
+
+	   position: relative;
+	}
+
+}
+
+.button-action-block{
+	margin: 10px auto 0;
+	max-width: 117px;
+	text-align: left;
+}

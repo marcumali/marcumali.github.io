@@ -1,0 +1,452 @@
+section,
+.section{
+	width: 100%;
+
+	position: relative;
+}
+
+.bg-parallax {
+	width: 100%;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    padding-top: 160px;
+
+	left: 0;
+	position: absolute;
+	top: 0;
+
+	@include media-min( $screen-md ){
+		background-attachment: fixed;
+	}
+
+}
+
+.parallax-text{
+	height: 100%;
+	width: 100%;
+
+	.h5{
+		color: $white;
+		letter-spacing: normal;
+		padding: 0 20px;
+
+		&.dark{
+			color: $primary-color;
+			text-shadow: 1px 1px 3px rgba( 255,255,255,.9 );
+		}
+
+	}
+
+	.spacer{
+		display: block;
+		font-size: 0;
+
+		@include media-min( $screen-sm ){
+			display: inline-block;
+		}
+
+	}
+}
+
+.parallax-block{
+	height: 100%;
+
+	.display-table { display: table; }
+	.display-middle{ display: table-cell; }
+
+}
+
+.secondary-layer{
+	background-image: url('/dist/images/hole-inside.jpg');
+}
+
+.primary-layer{
+	background-image: url('/dist/images/hole.png');
+}
+
+.section-banner{
+	padding-bottom: 100px;
+	padding-top: 100px;
+
+	position: relative;
+
+	@include media-min( $screen-xs ){
+		padding-bottom: 150px;
+	}
+
+	@include media-min( $screen-sm ){
+		height: 100%;
+		padding-bottom: 0;
+		padding-top: 0;
+	}
+
+	img{
+		max-width: 180px;
+
+		left: 0;
+		right: 0;
+
+	}
+
+	.banner__name{
+		font-weight: 900;
+		padding: 0;
+
+		span{
+			color: $primary-light-color;
+			letter-spacing: -4px;
+
+		}
+
+	}
+	.banner__title{
+		border-left: 10px solid $white;
+		border-right: 10px solid $white;
+		display: inline-block;
+		margin-left: auto;
+		margin: 45px auto 0;
+		width: 100%;
+
+		position: relative;
+
+		@include media-min( $screen-xs ){
+			border: medium none;
+			display: block;
+			width: 440px;
+
+			top: 32px;
+		}
+
+		@include media-min( $screen-md ){
+		    width: 500px;
+		}
+
+	}
+	.box{
+		display: block;
+		margin: auto;
+		max-width: 750px;
+
+	}
+	.offset{
+		background-color: $white;
+	}
+	.onset{
+		@include transition( all, 2s );
+	}
+	.h2{
+		color: $primary-color;
+		font-size: 30px;
+		font-weight: 100;
+		letter-spacing: 7px;
+		margin: 0;
+		padding: 25px 10px 25px 17px;
+		text-align: center;
+
+		@include media-min( $screen-sm ){
+			font-size: 40px;
+			letter-spacing: 17px;
+			padding: 30px 10px 25px 25px;
+		}
+
+		@include media-min( $screen-md ){
+			font-size: 45px;
+			padding: 25px 55px 25px 44px;
+		}
+
+	}
+	.h5{
+		color: $tertiary-color;
+		font-size: 15px;
+		font-weight: 500;
+		letter-spacing: 0;
+		margin: 0 auto;
+
+		@include media-min( $screen-sm ){
+			font-size: 18px;
+			letter-spacing: 4px;
+		}
+
+	}
+
+	.h6{
+		@include transition( all, 1.4s );
+
+		clear: both;
+		color: $primary-light-color;
+		display: inline-block;
+	    font-size: 12px;
+		font-weight: 300;
+		letter-spacing: 0;
+		margin: 0;
+		text-align: center;
+		width: 100%;
+
+		@include media-min( $screen-xs ){
+			font-size: 15px;
+		}
+
+	}
+
+	.col-md-8{
+		margin-top: 50px;
+	}
+	.btn-action{
+		margin: auto;
+		text-align: center;
+		width: 60px;
+
+		bottom: 20px;
+		left: 0;
+		position: absolute;
+		right: 0;
+
+		@include media-min( $screen-md ){
+		    bottom: 40px;
+		}
+
+	}
+}
+
+.banner__content{
+	.banner__name:nth-child(1){
+		text-align: right;
+	}
+}
+
+.section-profile{
+	padding-top: 60px;
+    padding-bottom: 40px;
+
+	@include media-min( $screen-md ){
+		padding-top: 100px;
+		padding-bottom: 140px;
+	}
+
+	.h3{
+		line-height: 1;
+		margin: 0;
+		span{
+			color: $secondary-color;
+			display: inline-block;
+			font-size: 30px;
+			letter-spacing: normal;
+			margin-left: 10px;
+			text-transform: lowercase;
+
+			@include media-min( $screen-sm ){
+				display: block;
+			}
+
+		}
+	}
+}
+
+.divider-fluid{
+
+	&:before{
+		display: none;
+		background-color: $primary-color;
+		height: 5px;
+		width: 500%;
+
+		bottom: 0;
+		content: '';
+		position: absolute;
+
+		@include media-min( $screen-sm ){
+			display: block;
+		}
+
+	}
+
+	&.right{
+		&:before{
+			left: 15px;
+		}
+
+	}
+
+	&.left{
+		&:before{
+			right: 15px;
+		}
+		.reveal-controls{ right: 45px; }
+	}
+
+}
+
+.profile-content{
+	display: table;
+	text-align: center;
+
+	@include media-min( $screen-sm ){
+		margin-bottom: 20px;
+		margin-top: 20px;
+		min-height: 330px;
+		padding-bottom: 50px;
+		padding-top: 50px;
+		text-align: left;
+	}
+
+	.divider{
+		margin-left: 15px;
+	}
+
+	img{
+		margin-top: 20px;
+	}
+
+}
+
+.profile-content-text{
+
+	@include transition( all, 0.3s );
+
+	overflow: hidden;
+
+	li{
+		margin-bottom: 20px;
+	}
+
+	&.content-text{
+		@include media-min( $screen-sm ){
+			height: 250px;
+		}
+	}
+
+}
+
+.section-block-full{
+	background-color: $primary-light-color;
+
+	position: relative;
+
+	@include media-min( $screen-sm ){
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+
+	.btn{
+		margin-top: 40px;
+	}
+
+	.block-middle{
+
+		left: 0;
+		right: 0;
+
+		@include media-min( $screen-sm ){
+			@include vertical-align( relative );
+			z-index: 1;
+		}
+
+	}
+
+	&,.particles{ height: 250px; }
+
+	canvas{
+		position: absolute;
+		top: 0;
+
+	}
+
+}
+
+.animate-text{
+	opacity: 0;
+
+	position: relative;
+	.animate-fade{
+		@include transition( all,2s );
+
+		background-color: $white;
+		height: 100%;
+
+		width: 100%;
+
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	&.in{
+		opacity: 1;
+		.animate-fade{
+			width: 0;
+		}
+	}
+}
+
+.bordered{
+	position: relative;
+	.bar{
+		position: absolute;
+		&:nth-of-type(1),
+		&:nth-of-type(3),
+		&:nth-of-type(5){
+			height: 5px;
+			width: 100%;
+			div{
+				background-color: $primary-color;
+				width: 0;
+				height: 100%;
+			}
+		}
+		&:nth-of-type(5),
+		&:nth-of-type(4){
+			right: 0;
+		}
+		&:nth-of-type(3){
+			width: 100%;
+			bottom: 0;
+		}
+		&:nth-of-type(1),
+		&:nth-of-type(5){
+			width: 50%;
+		}
+		&:nth-of-type(5){
+			width: 50%;
+		}
+		&:nth-of-type(4),
+		&:nth-of-type(5),
+		&:nth-of-type(1){
+			@include transform( rotate( 180deg ) );
+		}
+		&:nth-of-type(1){
+			left: 0;
+			right: auto;
+		}
+		&:nth-of-type(2),
+		&:nth-of-type(4){
+			width: 5px;
+			height: 100%;
+			div{
+				height: 0;
+			}
+		}
+		div{
+			@include transition( all,1.5s );
+
+			background-color: $primary-color;
+		}
+
+		&.in div{
+			height: 100%;
+			width: 100%;
+		}
+
+	}
+}
+
+.footer-credential{
+	color: #ffffff;
+	font-size: 10px;
+	width: 100%;
+
+	bottom: 30px;
+	left: 0;
+	position: absolute;
+}

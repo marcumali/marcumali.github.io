@@ -1,0 +1,30 @@
+.carousel{
+	display: inline-block;
+	width: 100%;
+}
+.carousel-indicators {
+    bottom: -25px;
+	li, .active{
+		@include transition( all, 0.3s );
+		@include border-radius( 0 );
+
+		border: medium none;
+		height: 5px;
+		margin: 0 2px;
+		width: 25px;
+	}
+	li{
+		background-color: rgba( 255,254,255,.2 );
+		&:hover{
+			height: 10px;
+		}
+	}
+	.active{
+		background-color: rgba( 255,254,255,.5 );
+	}
+}
+.carousel-inner{
+	.item{
+		height: 120px;
+	}
+}

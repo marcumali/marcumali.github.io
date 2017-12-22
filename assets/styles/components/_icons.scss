@@ -1,0 +1,202 @@
+.icon{
+	@include border-radius( 50% );
+
+	display: inline-block;
+
+	position: relative;
+
+	&:before,
+	&:after{
+		@include transition( all, 0.3s );
+
+		margin: auto;
+		pointer-events: none;
+
+		bottom: 0;
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 1;
+	}
+
+	&:after{
+		color: $secondary-color;
+		opacity: 0;
+	}
+
+	&.icon-light{
+		background-color: #ffffff;
+	}
+
+	&.animate-icon-right{
+		&:after{
+			left: -50%;
+		}
+	}
+
+	&.animate-icon-top{
+		@include transform( rotate(-180deg) );
+
+		&:after{
+		    top: -50%;
+		}
+
+	}
+
+	&.animate-icon-down:after{ top: -50%; }
+
+}
+
+.icon-dark{
+
+	background-color: $primary-color;
+
+	&:before{ color: #ffffff; }
+
+}
+
+.icon-light{
+
+	background-color: #ffffff;
+
+	&:before{ color: $primary-color; }
+
+}
+
+.icon-action:hover .icon{
+
+	&:before{ opacity: 0; }
+	&:after{ opacity: 1; }
+
+	&.animate-icon-right{
+
+		&:before{ left: 50%; }
+		&:after{ left: 0; }
+
+	}
+
+	&.animate-icon-down{
+
+		&:before{ top: 50%; }
+		&:after{ top: 0; }
+
+	}
+
+	&.animate-icon-top{
+
+		&:before{ top: 50%; }
+		&:after{ top: 0; }
+
+	}
+
+}
+
+.icon-label{
+
+	&.label-top span{
+		color: $tertiary-color;
+		font-size: 12px;
+		text-align: center;
+		width: 100%;
+
+		left: 0;
+		top: -20px;
+
+		@include media-min( $screen-sm ){
+			font-size: 16px;
+		}
+		
+	}
+
+	&.label-right span{
+		color: #fff;
+		display: inline-table;
+		font-size: 14px;
+		margin: auto 0 auto 7px;
+		min-width: 90px;
+
+		left: 100%;
+	    bottom: 0;
+	    top: 0;
+	}
+
+	span{
+		font-weight: 500;
+
+		position: absolute;
+	}
+
+}
+
+.icon-home{
+
+	&:before,
+	&:after{
+	    content: "\e902";
+	}
+
+}
+
+.icon-briefcase{
+
+	&:before,
+	&:after{
+		content: '\e9ae';
+	}
+
+}
+
+.icon-phone-hang-up{
+
+	&:before,
+	&:after{
+		content: '\e943';
+	}
+
+}
+
+.icon-letter-m{
+
+	&:before,
+	&:after{
+		content: '\e900';
+	}
+
+}
+
+.icon-lg .icon{
+	width: 45px;
+	height: 45px;
+
+	@include media-min( $screen-sm ){
+		width: 60px;
+		height: 60px;
+	}
+
+	&:before,
+	&:after{
+
+		font-size: 18px;
+		height: 18px;
+		width: 18px;
+
+		@include media-min( $screen-sm ){
+			font-size: 25px;
+			height: 25px;
+			width: 25px;
+		}
+
+	}
+}
+
+.icon-sm .icon{
+	width: 30px;
+	height: 30px;
+	&:before,
+	&:after{
+		font-size: 15px;
+		height: 15px;
+		width: 15px;
+	}
+}

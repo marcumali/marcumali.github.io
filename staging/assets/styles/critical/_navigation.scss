@@ -1,0 +1,65 @@
+.navigation{
+    position: relative;
+
+    ul{
+        text-align: center;
+    }
+
+    li{
+        display: inline-block;
+        margin: 0 5px;
+
+        @include media-min( $screen-sm ){
+            margin: 0 20px;
+        }
+
+    }
+
+    .is-first{
+        @include opacity( 0 );
+
+        overflow: hidden;
+        width: 0;
+
+        img{
+            width: 50px;
+        }
+
+    }
+
+    a{
+        font-family: $font-family-heading;
+        text-transform: uppercase;
+
+        top: 0;
+    }
+
+    &-item{
+        width: 100%;
+
+        left: 0;
+        position: absolute;
+        top: 20px;
+        z-index: 1;
+    }
+
+    &-label{
+        display: none;
+
+        @include media-min( $screen-sm ){
+            display: block;
+        }
+
+    }
+
+    &-icon{
+        @include vertical-align( absolute );
+
+        font-size: 2rem;
+        margin: auto;
+
+        left: 0;
+        right: 0;
+    }
+
+}

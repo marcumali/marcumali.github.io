@@ -1,354 +1,140 @@
-*:focus{
-	outline: none;
+*{
+	box-sizing: border-box;
+
+	&:focus{
+		outline: none;
+	}
 }
 
-html,body{
+html,
+body,
+main{
 	height: 100%;
-	padding: 0;
-	margin: 0;
+}
+html{
+	font-size: 55.555555%;
+
+	@include media-min( $screen-md ){
+		font-size: 62.5%;
+	}
+
 }
 
 body{
 	-webkit-font-smoothing: antialiased;
-	font-family: $font-family-base;
-	font-size: 16px;
+	background-color: $black;
+	color: $white;
+	font-family: $font-family-heading;
+	font-size: 1.6rem;
+	line-height: 1.8;
 	overflow-x: hidden;
 	text-rendering: optimizeLegibility;
-}
 
-.section-wrap{
-	padding: 60px 0;
+	@include media-min( 321px ){
+		font-size: 1.8rem;
+	}
+
+	@include media-min( $screen-sm ){
+		line-height: 1.5;
+	}
+
 }
 
 img{
+	display: block;
 	height: auto;
 }
 
-.clear{
-	clear: both;
-	width: 100%;
+ul{
+	padding: 0;
+	margin: 0;
 }
 
-.marcumali-logo{
+li{
+	list-style-type: none;
+}
+
+a{
+	color: $white;
 	display: block;
-	margin: auto;
+	text-decoration: none;
 }
 
-.align-center{
-	text-align: center;
-}
+.display{
 
-.content{
-	p{
-		color: $white;
-		font-size: 1.5rem;
-	}
-}
-
-.onset{
-	.offset-top{
-		top: -12px;
-	}
-	.offset{
-		margin: auto;
-		text-align: center;
-		width: 80%;
-
-		left: 0;
-		position: absolute;
-		right: 0;
-		top: -6px;
-
-		@include media-min( $screen-md ){
-			top: -9px;
-		}
-
-		@include media-min( $screen-lg ){
-			top: -10px;
-		}
-
-	}
-}
-
-.seperator{
-	display: inline-block;
-	width: 30px;
-}
-
-.subtitle{
-	font-weight: 300;
-	font-size: 20px;
-
-	@include media-min( $screen-sm ){
-		font-size: 25px;
+	&-table{
+		display: table;
+		padding: 50px 0;
+		width: 100%;
 	}
 
-}
-
-.text-xs-right{
-	text-align: right;
-}
-
-.text-lg-right{
-	@include media-min( $screen-lg ){
-		text-align: right!important;
-	}
-
-}
-
-.text-lg-center{
-	@include media-min( $screen-lg ){
-		text-align: center!important;
-	}
-
-}
-
-.text-xs-center{
-	text-align: center;
-}
-
-.display-table{
-	display: table;
-	width: 100%;
-}
-
-.display-middle{
-	display: table-cell;
-	padding: 50px 0;
-	vertical-align: middle;
-	width: 100%;
-
-	position: relative;
-}
-
-.gradient-overflow{
-
-	position: relative;
-
-	&:after{
-		display: none;
-		height: 150px;
+	&-middle{
+		display: table-cell;
+		vertical-align: middle;
 		width: 100%;
 
-		background: -moz-linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.15) 100%, rgba(255,255,255,0.15) 100%);
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255,255,255,0.15)), color-stop(0%, rgba(255,255,255,0.15)), color-stop(100%, rgba(255,255,255,1)));
-		background: -webkit-linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.15) 100%, rgba(255,255,255,0.15) 100%);
-		background: -o-linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.15) 100%, rgba(255,255,255,0.15) 100%);
-		background: -ms-linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.15) 100%, rgba(255,255,255,0.15) 100%);
-		background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.15) 100%, rgba(255,255,255,0.15) 100%);
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#FFFFFF',GradientType=0 );
+		position: relative;
 
-		content: '';
-		left: 0;
-		position: absolute;
-		z-index: 1;
-
-
-		bottom: 0;
-
-		@include media-min( $screen-sm ){
-			display: block;
-		}
 	}
 
-	&.show-gradient:before{
-		display: block;
-	}
-
-}
-
-.reveal-controls{
-
-	bottom: -17px;
-	position: absolute;
-	z-index: 1;
-
-	li{
-		left: 0;
-		position: absolute;
-		top: -35px;
-	}
 }
 
 .overlay{
-
 	position: relative;
 
 	&:before{
-		@include opacity( 0.2 );
-		@include transition( all,.3s );
-	}
-
-	&.static-overlay:before{
 		height: 100%;
 		width: 100%;
-		left: 0;
-		top: 0;
-	}
 
-	&:before,
-	&:after{
 		content: '';
-		position: absolute;
-	}
-
-	&.sun:before{ background-color: $buttered-rum; }
-
-	&.sand:before{ background-color: $tertiary-color; }
-
-	&.water:before{ background-color: $primary-color; }
-
-	&.wind:before{ background-color: $dark-cerulean; }
-
-}
-
-.section-header{
-
-	.h2,
-	p{
-		margin: 0;
-	}
-
-	&.light{
-		color: #ffffff;
-		.h2,
-		p{
-			color: #ffffff;
-		}
-	}
-
-	&.dark{
-		color: $primary-color;
-		text-shadow: 1px 1px 3px rgba( 255,255,255,.9 );
-		.h2,
-		p{
-			color: $primary-color;
-			text-shadow: 1px 1px 3px rgba( 255,255,255,.9 );
-		}
-	}
-
-	&.dark{
-		.subtitle{
-			color: $secondary-color;
-		}
-	}
-
-}
-
-.featured-image{
-
-	margin: 25px 0 15px 0;
-
-	.me{
-		border: 2px solid $primary-color;
-		margin: auto;
-
 		left: 0;
 		position: absolute;
-		right: 0;
-		z-index: -1;
+		top: 0;
+		z-index: 1;
 	}
 
+	&.is-70{
+
+		&:before{
+			@include opacity( .7 );
+		}
+
+	}
+
+	&.is-black:before{
+		background-color: $black;
+	}
+
+}
+
+.center-image{
+	overflow: hidden;
+
+	position: relative;
 
 	img{
-		@include border-radius( 50% );
-
-		border: 2px solid $text-color;
-		margin-top: 130px;
-		padding: 2px;
-
-		&:nth-of-type(3){
-			margin-top: 180px;
-		}
+		@include center-image;
 	}
 
 }
 
-.bg-white{
-	background-color: $white;
-	color: $black;
-}
-
-.bg-black{
-	background-color: $black;
-}
-
-.bg-span-block{
-	padding: 0 10px;
-}
-
-.divider{
-	background-color: $white;
-	height: 2px;
-	width: 100%;
-	margin: 50px 0;
-
-	position: relative;
-
-	&:before{
-		@include border-radius( 50% );
-
-		background-color: $white;
-		height: 20px;
-		margin: auto;
-		width: 20px;
-
-		content: '';
-		left: 0;
-		position: absolute;
-		right: 0;
-		top: -9px;
-
-	}
-
-}
-
-.social-media{
-	margin: 95px 0 0;
-	padding: 0;
+.text-center{
 	text-align: center;
+}
 
-	@include media-min( $screen-sm ){
-		margin: 0;
+.text-right{
+	text-align: right;
+}
+
+.has-transition{
+	@include transition( all,0.3s );
+
+	&.is-1s{
+		@include transition( all,1s );
 	}
 
 }
 
-.social-media-list{
-	display: inline-block;
-	height: 45px;
-	width: 45px;
-	margin: 0 10px;
-
-	position: relative;
-
-	@include media-min( $screen-md ){
-		height: 60px;
-		width: 60px;
-	}
-
-	a{
-		@include border-radius( 50% );
-
-		background-color: $white;
-		color: $primary-color;
-		margin: 0;
-
-		bottom: 0;
-		left: 0;
-		position: absolute;
-		right: 0;
-		top: 0;
-
-		&:hover{
-			color: $secondary-color;
-		}
-
-	}
-
-}
-
-.spacer-desktop{
-	color: transparent;
-	display: block;
+.is-bg-tile{
+	@include background-tile-left;
 }

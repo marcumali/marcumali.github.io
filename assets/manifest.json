@@ -3,12 +3,11 @@
 		"main.js": {
 			"files": [
 				"scripts/main.js",
-				"scripts/visibility.js",
+				"scripts/banner.js",
 				"scripts/animation.js",
-				"scripts/section.js",
-				"scripts/navigation.js",
-				"scripts/grid.js",
-				"scripts/vendor/scroll-animation.js"
+				"scripts/reveal.js",
+				"scripts/instagram.js",
+				"scripts/back-to-top.js"
 			],
 			"main": true
 		},
@@ -18,11 +17,16 @@
 			],
 			"main": true
 		},
+		"main-critical.css": {
+			"files": [
+				"styles/main-critical.scss"
+			]
+	    },
 		"jquery.js": {
 			"bower": ["jquery"]
 		}
 	},
 	"config": {
-		"devUrl": "http://github.marcumali.com"
+		"devUrl": "http://dev.www.marcumali.stage"
 	}
 }

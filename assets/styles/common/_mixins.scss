@@ -1,182 +1,136 @@
-/* -----------------------------------------------------------------------------
 
-    MIXINS
-
------------------------------------------------------------------------------ */
-
-	@mixin media-min( $min ) {
-		@media screen and (min-width: #{ $min }) {
-			@content;
-		}
+@mixin media-min( $min ) {
+	@media screen and (min-width: #{ $min }) {
+		@content;
 	}
+}
 
-	// parameter example: $screen-xs-min, $screen-xs-max
-	@mixin media-between( $min, $max ) {
-		@media screen and ( min-width: #{$min} ) and ( max-width: #{$max} ) {
-			@content;
-		}
+@mixin media-between( $min, $max ) {
+	@media screen and ( min-width: #{$min} ) and ( max-width: #{$max} ) {
+		@content;
 	}
+}
 
-	// parameter example: $screen-xs
-	@mixin media-max( $max ) {
-		@media  screen and ( max-width: #{$max} ) {
-			@content;
-		}
+@mixin media-max( $max ) {
+	@media  screen and ( max-width: #{$max} ) {
+		@content;
 	}
+}
 
-	/* -----------------------------------------------------------------------------
-		Mixin Helper
-	----------------------------------------------------------------------------- */
+@mixin transition( $transition... ) {
+	-webkit-transition: $transition;
+	-o-transition: $transition;
+	transition: $transition;
+}
 
-	@mixin transition( $transition... ) {
-		-webkit-transition: $transition;
-		-o-transition: $transition;
-		transition: $transition;
-	}
+@mixin center-image{
+	display: block;
+	height: auto;
+	width: 100%;
+	margin: auto;
+	min-height: 100%;
+	min-width: 100%;
+	bottom: -9999px;
+	left: -9999px;
+	position: absolute;
+	right: -9999px;
+	top: -9999px;
+	object-fit: cover;
+}
 
-	@mixin delay( $delay ){
-		-webkit-animation-delay: $delay;
-		-moz-animation-delay: $delay;
-		-o-animation-delay: $delay;
-		animation-delay: $delay;
-	}
+@mixin delay( $delay ){
+	-webkit-animation-delay: $delay;
+	-moz-animation-delay: $delay;
+	-o-animation-delay: $delay;
+	animation-delay: $delay;
+}
 
-	@mixin background-common{
-		background-repeat: no-repeat;
-		background-position: center;
-	}
+@mixin bg-norepeat{
+	background-repeat: no-repeat;
+}
 
-	@mixin background-cover {
-		@include background-common;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-	}
+@mixin bg-cover{
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
 
-	@mixin background-size( $size ) {
-		-webkit-background-size: $size;
-		-moz-background-size: $size;
-		-o-background-size: $size;
-		background-size: $size;
-	}
+@mixin background-cover-center {
+	@include bg-norepeat;
+	@include bg-cover;
 
-	@mixin background-center{
-		@include background-common;
-	}
+	background-position: center;
+}
 
-	@mixin transform ($rotate) {
-		-ms-transform: $rotate; /* IE 9 */
-		-webkit-transform: $rotate; /* Chrome, Safari, Opera */
-		transform: $rotate;
-	}
+@mixin background-tile-left {
+	@include bg-norepeat;
 
-	@mixin activeMenu{
-		background-color: rgba( 0,0,0,.4 );
-		height: 50px;
-		margin: 0 auto;
-		width: 50px;
+    background-position: left center;
+}
 
-		left: 115px;
-		position: absolute;
-		top: 0;
-	}
+@mixin background-size( $size ) {
+	-webkit-background-size: $size;
+	-moz-background-size: $size;
+	-o-background-size: $size;
+	background-size: $size;
+}
 
-	// Text align last
-	@mixin alignlast( $align ){
-		text-align-last: $align;
-		-webkit-text-align-last: $align;
-		-moz-text-align-last: $align;
-		-ms-text-align-last: $align;
-		-o-text-align-last: $align;
-	}
+@mixin transform ($rotate) {
+	-ms-transform: $rotate;
+	-webkit-transform: $rotate;
+	transform: $rotate;
+}
 
-	/* border radius */
-	@mixin border-radius ($radius) {
-		-webkit-border-radius: $radius;
-		-moz-border-radius: $radius;
-		border-radius: $radius;
-	}
+@mixin border-radius ($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+}
 
-	// Overlay
-	@mixin overlay( $opacity ){
-		-webkit-box-shadow: inset 0px 0px 0px 1000px rgba(23,51,66,$opacity);
-		-moz-box-shadow: inset 0px 0px 0px 1000px rgba(23,51,66,$opacity);
-		box-shadow: inset 0px 0px 0px 1000px rgba(23,51,66,$opacity);
-	}
+@mixin vertical-align( $position: relative ) {
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	position: $position;
+	top: 50%;
+}
 
-	// Disable Shadow
-	@mixin disableShadow(){
-		-webkit-box-shadow: initial;
-		-moz-box-shadow: initial;
-		box-shadow: initial;
-	}
+@mixin textnone () {
+	line-height: 0;
+	font-size: 0;
+	color: transparent;
+}
 
-	/* placeholder */
-	@mixin placeholder ($color) {
-		&::-webkit-input-placeholder {
-		   color: $color;
-		}
-		&:-moz-placeholder { /* Firefox 18- */
-		   color:  $color;
-		}
-		&::-moz-placeholder {  /* Firefox 19+ */
-		   color:  $color;
-		}
-		&:-ms-input-placeholder {
-		   color:  $color;
-		}
-	}
+@mixin font-smoothing {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
 
-	@mixin vertical-align( $position: relative ) {
-		-webkit-transform: translateY(-50%);
-		-ms-transform: translateY(-50%);
-		transform: translateY(-50%);
-		position: $position;
-		top: 50%;
-	}
+@mixin box-sizing ( $bs ) {
+	-webkit-box-sizing: $bs;
+	-moz-box-sizing: $bs;
+	box-sizing: $bs;
+}
 
-	/* text none */
-	@mixin textnone () {
-		line-height: 0;
-		font-size: 0;
-		color: transparent;
-	}
+@mixin appearance ( $ap ) {
+	-webkit-appearance: $ap;
+	-moz-appearance:    $ap;
+	appearance:         $ap;
+}
 
-	/* box shadow */
-	@mixin box-shadow ($bs){
-		-webkit-box-shadow: $bs;
-		-moz-box-shadow: $bs;
-		box-shadow: $bs;
-	}
+@mixin blur( $blur ){
+	-webkit-filter: blur( $blur );
+	-moz-filter: blur( $blur );
+	-o-filter: blur( $blur );
+	-ms-filter: blur( $blur );
+	filter: blur( $blur );
+}
 
-	@mixin font-smoothing {
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-	}
-
-	@mixin user-select ( $us ) {
-		-webkit-user-select: $us;
-		-moz-user-select: $us;
-		-ms-user-select: $us;
-	}
-
-	@mixin box-sizing ( $bs ) {
-		-webkit-box-sizing: $bs;
-		-moz-box-sizing: $bs;
-		box-sizing: $bs;
-	}
-
-	@mixin appearance ( $ap ) {
-		-webkit-appearance: $ap;
-		-moz-appearance:    $ap;
-		appearance:         $ap;
-	}
-
-	@mixin blur( $blur ){
-		-webkit-filter: blur( $blur );
-		-moz-filter: blur( $blur );
-		-o-filter: blur( $blur );
-		-ms-filter: blur( $blur );
-		filter: blur( $blur );
-	}
+@mixin gray( $gray ){
+	-webkit-filter: grayscale( $gray );
+	-moz-filter: grayscale( $gray );
+	-o-filter: grayscale( $gray );
+	-ms-filter: grayscale( $gray );
+	filter: grayscale( $gray );
+}

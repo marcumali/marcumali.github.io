@@ -1,90 +1,88 @@
+@include media-min( $screen-sm ){
+
+    .btn.btn-primary:hover{
+
+        &:after{
+            margin-top: 1px;
+
+            right: -6px;
+        }
+
+        &:before{
+            @include border-radius( 50% );
+
+            background-color: transparent;
+            border: 2px solid $secondary-color;
+            height: 20px;
+            margin-top: 1px;
+            width: 20px;
+
+            right: -13px;
+        }
+
+    }
+
+}
+
 .btn{
-	@include border-radius( 0 );
-	@include transition( all,0.3s );
+    @include border-radius( 30px );
 
-	font-family: $font-family-base;
-	padding: 10px 30px;
+    display: inline-block;
+    padding: 5px;
+    text-align: center;
 
-	&:focus,
-	&:active,
-	&:hover,
-	&:active:focus{
-		background-color: transparent;
-		box-shadow: none;
-		color: #ffffff;
-		outline: none;
-	}
+    &.btn-primary{
+        border: 2px solid $secondary-color;
+        font-size: 1.6rem;
 
-	span{
-		font-family: $font-family-base;
+        position: relative;
 
-		position: absolute;
-	}
+        @include media-min( $screen-md ){
+            min-width: 130px;
+        }
 
-}
+        &:before,
+        &:after{
+            @include transition( all,0.3s );
+            @include vertical-align;
 
-.btn-primary{
+            background-color: $secondary-color;
 
-	background-color: $primary-color;
-	border: 1px solid $primary-color;
-	color: #ffffff;
-	text-transform: uppercase;
+            content: '';
+            position: absolute;
+            right: -20px;
 
-	&:hover{
-		background-color: #ffffff;
-		border: 1px solid #ffffff;
-		color: $primary-color;
-	}
+            &:hover{
+                right: 27px;
+            }
 
-	&:active,
-	&:focus{
-		background-color: #ffffff;
-		border: 1px solid #ffffff;
-	}
+        }
 
-}
+        &:before{
+            height: 2px;
+            width: 30px;
+        }
 
-.btn-secondary{
+        &:after{
+            @include border-radius( 50% );
 
-	background-color: #ffffff;
-	border: 1px solid #ffffff;
-	color: $primary-color;
-	text-transform: uppercase;
+            width: 10px;
+            height: 10px;
+        }
 
-	&:hover{
-		background-color: $primary-color;
-		border: 1px solid $primary-color;
-		color: #ffffff;
-	}
+    }
 
-	&:active,
-	&:focus{
-		background-color: $primary-color;
-		border: 1px solid $primary-color;
-	}
+    &.is-wide{
+        min-width: 160px;
+
+        @include media-min( $screen-md ){
+            min-width: 200px;
+        }
+
+    }
 
 }
 
-.btn-action{
-
-	display: inline-block;
-
-	span{
-		color: #ffffff;
-		font-family: $font-family-base;
-		text-transform: uppercase;
-	}
-
-	a{
-		display: block;
-
-	   position: relative;
-	}
-
-}
-
-.button-action-block{
-	margin: 10px auto 0;
-	max-width: 117px;
-	text-align: left;
+button{
+    background-color: transparent;
 }

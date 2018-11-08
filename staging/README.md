@@ -1,1 +1,0 @@
-# macumali.github.io

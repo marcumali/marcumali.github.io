@@ -63,10 +63,6 @@ function keydownClick(){
 					}
 				});
 
-				$( window ).on( 'load', function(){
-					$( '.page-loader' ).fadeOut();
-				});
-
             },
             finalize: function() {
 

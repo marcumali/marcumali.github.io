@@ -39,10 +39,17 @@
 }
 
 @mixin delay( $delay ){
-	-webkit-animation-delay: $delay;
-	-moz-animation-delay: $delay;
-	-o-animation-delay: $delay;
-	animation-delay: $delay;
+	-webkit-transition-delay: $delay;
+    -moz-transition-delay: $delay;
+    -o-transition-delay: $delay;
+    transition-delay: $delay;
+}
+
+@mixin animation-delay( $value ){
+	-webkit-animation-delay: $value;
+    -moz-animation-delay: $value;
+    -o-animation-delay: $value;
+    animation-delay: $value;
 }
 
 @mixin bg-norepeat{

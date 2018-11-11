@@ -7,7 +7,8 @@
 				"scripts/animation.js",
 				"scripts/reveal.js",
 				"scripts/instagram.js",
-				"scripts/back-to-top.js"
+				"scripts/back-to-top.js",
+				"scripts/navigation.js"
 			],
 			"main": true
 		},

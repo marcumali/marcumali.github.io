@@ -85,8 +85,14 @@ var animateJS = {};
         function logoFix(){
             if ( $( window ).scrollTop() >= logoPos ) {
                 body.addClass( 'is-fix-logo' );
+                setTimeout( function(){
+                    $( '.main-logo' ).addClass( 'is-delay' );
+                }, 1200 );
             }else{
                 body.removeClass( 'is-fix-logo' );
+                setTimeout( function(){
+                    $( '.main-logo' ).removeClass( 'is-delay' );
+                }, 1200 );
             }
         }
 

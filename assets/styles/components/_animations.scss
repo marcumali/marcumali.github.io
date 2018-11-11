@@ -15,15 +15,15 @@
 
     @keyframes fadeInUp {
         from {
-            @include opacity(0);
+            @include opacity( 0 );
             @include transform( translate3d(0, 100%, 0) );
         }
 
         to {
-                @include opacity(1);
-                @include transform( none );
-            }
+            @include opacity( 1 );
+            @include transform( none );
         }
+    }
 
     .is-onload-animate {
         @include opacity(0);

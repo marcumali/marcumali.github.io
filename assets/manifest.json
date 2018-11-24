@@ -9,7 +9,8 @@
 				"scripts/reveal.js",
 				"scripts/instagram.js",
 				"scripts/back-to-top.js",
-				"scripts/navigation.js"
+				"scripts/navigation.js",
+				"scripts/defer.js"
 			],
 			"main": true
 		},

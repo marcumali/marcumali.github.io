@@ -17,10 +17,10 @@ var instagramFeedJS = {};
                     var img = $container.data( 'logo-url' );
 
             		for( var instagramData in data.data ){
-            			$container.append('<li class="feed-instagram-list center-image"><a href="' + data.data[ instagramData ].link +'" target="_blank"><img src="' + data.data[ instagramData ].images.low_resolution.url + '"></a></li>');
+            			$container.append('<li class="feed-instagram-list center-image"><a href="' + data.data[ instagramData ].link +'" target="_blank" rel="noreferrer noopener"><img src="' + data.data[ instagramData ].images.low_resolution.url + '"></a></li>');
             		}
 
-                    $container.append( '<li class="feed-instagram-list center-image is-logo"><a href="' + url + '" class="btn btn-primary" target="_blank">VIEW MORE ON INSTAGRAM</a></li>' );
+                    $container.append( '<li class="feed-instagram-list center-image is-logo"><a href="' + url + '" class="btn btn-primary" target="_blank" rel="noreferrer noopener">VIEW MORE ON INSTAGRAM</a></li>' );
             	},
             	error: function( data ){
             		console.log( data );
@@ -28,10 +28,8 @@ var instagramFeedJS = {};
             });
         };
 
-    $( window ).on( 'load', function(){
-        setTimeout( function(){
+        if ( $container.length > 0 ) {
             instagramFeedJS.Init();
-        }, 500 );
-    });
+        }
 
 }) (jQuery);

@@ -1,0 +1,56 @@
+body{
+
+    &.is-browser-ie{
+
+        .disabled-parallax{
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+    }
+
+    .is-browser-ie{
+
+        &-8{
+            background-color: $black;
+            display: table;
+            height: 100%;
+            width: 100%;
+
+            left: 0;
+            position: fixed;
+            top: 0;
+            z-index: 1111;
+
+            .h1{
+                font-size: 50px;
+                line-height: .9;
+                text-transform: uppercase;
+
+                span{
+                    font-size: 25px;
+                }
+
+            }
+
+            p{
+                font-size: 18px;
+            }
+
+            a{
+                color: yellow;
+                display: inline-block;
+            }
+
+        }
+
+        &-case{
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+    }
+
+}

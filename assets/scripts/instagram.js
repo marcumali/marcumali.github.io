@@ -20,7 +20,7 @@ var instagramFeedJS = {};
             			$container.append('<li class="feed-instagram-list center-image"><a href="' + data.data[ instagramData ].link +'" target="_blank"><img src="' + data.data[ instagramData ].images.low_resolution.url + '"></a></li>');
             		}
 
-                    $container.append( '<li class="feed-instagram-list center-image is-logo"><a href="' + url + '" class="btn btn-primary">VIEW MORE ON INSTAGRAM</a></li>' );
+                    $container.append( '<li class="feed-instagram-list center-image is-logo"><a href="' + url + '" class="btn btn-primary" target="_blank">VIEW MORE ON INSTAGRAM</a></li>' );
             	},
             	error: function( data ){
             		console.log( data );

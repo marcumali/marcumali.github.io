@@ -6,8 +6,6 @@
 
 @import "common/variables";
 @import "common/mixins";
-
-// TODO: move this to critical
 @import "common/typography";
 @import "common/global";
 
@@ -19,7 +17,4 @@
     @import "critical/buttons";
 }
 
-// TODO: move this to critical
 @import "components/navigation";
-
-@import "critical/animation";

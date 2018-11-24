@@ -3,6 +3,7 @@
 		"main.js": {
 			"files": [
 				"scripts/main.js",
+				"scripts/browser.js",
 				"scripts/banner.js",
 				"scripts/animation.js",
 				"scripts/reveal.js",

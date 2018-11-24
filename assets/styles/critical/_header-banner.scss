@@ -20,8 +20,12 @@
 
         &-title{
             color: $primary-color;
-            font-size: 2.2rem;
-            letter-spacing: 2px;
+            font-size: 2rem;
+            letter-spacing: 0;
+
+            @include media-min( 321px ){
+                font-size: 2.2rem;
+            }
 
             @include media-min( $screen-xs ){
                 font-size: 2.6rem;
@@ -29,7 +33,7 @@
 
             @include media-min( $screen-sm ){
                 font-size: 3.4rem;
-                letter-spacing: 10px;
+                letter-spacing: 5px;
             }
 
             @include media-min( $screen-lg ){

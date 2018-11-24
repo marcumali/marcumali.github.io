@@ -69,9 +69,10 @@ var animateJS = {};
 	};
 
     animateJS.Parallax = function(){
-        $( '.js-parallax' ).each( function(){
-			var dataSpeed = $( this ).data( 'speed' );
-			$( this ).parallax({
+        $( '.js-parallax' ).each( function( index, value ){
+            var _this = $( value );
+			var dataSpeed = _this.data( 'speed' );
+			_this.parallax({
 				speed : dataSpeed
 			});
 		});

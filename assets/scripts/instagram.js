@@ -17,7 +17,7 @@ var instagramFeedJS = {};
                     var img = $container.data( 'logo-url' );
 
             		for( var instagramData in data.data ){
-            			$container.append('<li class="feed-instagram-list center-image"><a href="' + data.data[ instagramData ].link +'" target="_blank" rel="noreferrer noopener"><img src="' + data.data[ instagramData ].images.low_resolution.url + '"></a></li>');
+            			$container.append('<li class="feed-instagram-list center-image"><a href="' + data.data[ instagramData ].link +'" target="_blank" rel="noreferrer noopener"><img src="' + data.data[ instagramData ].images.low_resolution.url + '" alt="Instagram Image"></a></li>');
             		}
 
                     $container.append( '<li class="feed-instagram-list center-image is-logo"><a href="' + url + '" class="btn btn-primary" target="_blank" rel="noreferrer noopener">VIEW MORE ON INSTAGRAM</a></li>' );

@@ -17,7 +17,16 @@ var instagramFeedJS = {};
                     var img = $container.data( 'logo-url' );
 
             		for( var instagramData in data.data ){
-            			$container.append('<li class="feed-instagram-list center-image"><a href="' + data.data[ instagramData ].link +'" target="_blank" rel="noreferrer noopener" aria-label="Instagram"><img src="' + data.data[ instagramData ].images.low_resolution.url + '" alt="Instagram Image"></a></li>');
+
+                        var lists = $( '.feed-instagram-list' );
+                        var dataSrc = data.data[ instagramData ].images.low_resolution.url;
+                //        var dataDefer = data.data[ instagramData ].images.data( 'src' );
+
+                //        lists.find( 'img' ).attr( 'src', dataDefer );
+
+                    console.log( data.data[ instagramData ].images );
+
+            			$container.append( '<li class="feed-instagram-list center-image"><a href="' + data.data[ instagramData ].link +'" target="_blank" rel="noreferrer noopener" aria-label="Instagram"><img data-src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" src="' + dataSrc + '" alt="Instagram Image"></a></li>');
             		}
 
                     $container.append( '<li class="feed-instagram-list center-image is-logo"><a href="' + url + '" class="btn btn-primary" target="_blank" rel="noreferrer noopener">VIEW MORE ON INSTAGRAM</a></li>' );

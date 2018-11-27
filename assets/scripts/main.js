@@ -60,8 +60,12 @@ function keydownClick(){
 				$( window ).on({
 					resize: function(){
 						deviceJS();
+					},
+					load: function(){
+						$( '.lock-position' ).removeClass( 'lock-position' );
 					}
 				});
+
 
             },
             finalize: function() {

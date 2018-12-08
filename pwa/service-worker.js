@@ -1,10 +1,13 @@
-self.addEventListener( 'install', function(){
+self.addEventListener( 'install', function( event ){
     console.log( 'SW installed' );
     event.waitUntil(
-        caches.open( function( cache ){
+        caches.open( 'static' )
+        .then( function( cache ){
             cache.addAll([
                 '/',
-                '/index.html'
+                '/index.html',
+                '/dist/styles/main.css',
+                '/dist/styles/main-critical.css'
             ]);
         });
     );

@@ -19,13 +19,13 @@ const Header: React.FC<Props> = ({ title, name, content }: Props) => {
         <meta name={name} content={content} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        <meta name="description" content="Professional front-end developer in Manila Philippines for hire. Contact Marc Umali today for a quote." />
+        <meta name="description" content="Professional front-end developer and Ui/Ux Designer in Manila Philippines for hire. Contact Marc Umali today to be part of your team." />
         <meta name="author" content="Marc Umali" />
-        <meta name="keywords"  content="Web Front-end in Manila Philippines,Web Deloper in Manila Philippines,Web Designer in Manila Philippines" />
+        <meta name="keywords"  content="Frontend Developer, ReactJs, Ui/Ux Designer" />
         <meta name="Resource-type" content="Document" />
-        <meta property="og:title" content="Web Designer & Frontend Developer" />
+        <meta property="og:title" content="Frontend Developer and Ui/Ux Designer" />
         <meta property="og:type" content="image/jpeg" />
-        <meta property="og:description" content="Frontend and Web designer in Manila Philippines" />
+        <meta property="og:description" content="Frontend and Ui/Ux Designer in Manila Philippines" />
         <meta property="og:url" content="https://marcumali.vercel.app/" />
         <meta property="og:image" content="marcumali.jpg" />
         <meta name="google-site-verification" content="ilMlVM1n2ftKR-3BoLYSv85XbkI_15FphIbS3HsfuLs" />

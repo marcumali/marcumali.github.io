@@ -1,0 +1,26 @@
+[
+  {
+    "id": 0,
+    "label": "facebook",
+    "icon": "mdi:facebook",
+    "link": "https://www.facebook.com/marcjudy.official/"
+  },
+  {
+    "id": 1,
+    "label": "instagram",
+    "icon": "mdi:instagram",
+    "link": "https://www.instagram.com/marcumalimusic/"
+  },
+  {
+    "id": 2,
+    "label": "youtube",
+    "icon": "mdi:youtube",
+    "link": "https://www.youtube.com/channel/UC2jNebFHoN4VicjBE06N63Q"
+  },
+  {
+    "id": 3,
+    "label": "github",
+    "icon": "mdi:github",
+    "link": "https://github.com/marcumali"
+  }
+]

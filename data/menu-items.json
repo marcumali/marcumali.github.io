@@ -1,0 +1,26 @@
+[
+  {
+    "id": 0,
+    "label": "Home",
+    "icon": "home",
+    "idLabel": "section-1"
+  },
+  {
+    "id": 1,
+    "label": "Projects",
+    "icon": "briefcase",
+    "idLabel": "section-2"
+  },
+  {
+    "id": 2,
+    "label": "About",
+    "icon": "user",
+    "idLabel": "section-3"
+  },
+  {
+    "id": 3,
+    "label": "Connect",
+    "icon": "share-2",
+    "idLabel": "section-4"
+  }
+]

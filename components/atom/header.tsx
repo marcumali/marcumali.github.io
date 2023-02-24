@@ -24,7 +24,7 @@ const Header: React.FC<Props> = ({ title, name, content }: Props) => {
         <Navbar bg="black">
           <Container className="justify-content-between align-items-center">
             <Navbar.Brand href="/">
-              <Image src="logo.png" className="w-40px" alt="Marc Umali" />
+              <Image src="logo.png" className="w-40px h-auto" alt="Marc Umali" width={150} height={149} />
             </Navbar.Brand>
             <Nav>
               { MenuItems && MenuItems.map( (item: any, index: number) => (

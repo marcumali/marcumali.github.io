@@ -16,7 +16,7 @@ const Footer: React.FC<Props> = ({ className }: Props) => {
   return (
     <div className={className}>
       <div className="mb-4">
-        <Image src="logo.png" className="w-80px mb-1" alt="Marc Umali" />
+        <Image src="logo.png" className="w-80px mb-1 h-auto" alt="Marc Umali" width={150} height={149}/>
         <div className="text-spacing-3px">MARC UMALI</div>
       </div>
       <div className="fs-12px">

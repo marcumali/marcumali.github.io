@@ -17,7 +17,7 @@ const ContentABout: React.FC<Props> = ({ className }: Props) => {
           <Row className="align-items-center">
             <Col lg={6} className="position-relative">
               <TextFlip label="WORKSPACE 2.0" className="start-n30px"/>
-              <Image src="workspace.jpg" alt="Marc Umali" fluid />
+              <Image src="workspace.jpg" alt="Marc Umali" width={771} height={593} fluid/>
             </Col>
             <Col lg={6}>
               <div className="text-center text-white maxw-490px mx-auto px-5">

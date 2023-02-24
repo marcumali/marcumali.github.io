@@ -15,7 +15,7 @@ const BannerHero: React.FC<Props> = ({ className }: Props) => {
           <Row className="align-items-center">
             <Col md={6} className="position-relative">
               <TextFlip label="REACT & BOOTSTRAP5 VERSION" className="start-n100px" />
-              <Image src="marcumali.jpg" alt={publicRuntimeConfig.APP_NAME} fluid />
+              <Image src="marcumali.jpg" width={529} height={486} alt={publicRuntimeConfig.APP_NAME} fluid />
             </Col>
             <Col md={6}>
               <div className="text-white text-center text-md-start">

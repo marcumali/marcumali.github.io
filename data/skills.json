@@ -3,244 +3,290 @@
     "id": 0,
     "label": "ReactJs",
     "img": "logo-react.png",
-    "title": "Js Library"
+    "title": "Js Library",
+    "width": 60
   },
   {
     "id": 1,
     "label": "NextJs",
-    "img": "logo-next.png"
+    "img": "logo-next.png",
+    "width": 60
   },
   {
     "id": 2,
     "label": "React Bootstrap",
-    "img": "logo-react-bootstrap.png"
+    "img": "logo-react-bootstrap.png",
+    "width": 63
   },
   {
     "id": 3,
     "label": "React Native",
-    "img": "logo-react.png"
+    "img": "logo-react.png",
+    "width": 60
   },
   {
     "id": 4,
     "label": "VueJs",
-    "img": "logo-vue.png"
+    "img": "logo-vue.png",
+    "width": 69
   },
   {
     "id": 5,
     "label": "jQuery",
-    "img": "logo-jquery.png"
+    "img": "logo-jquery.png",
+    "width": 62
   },
   {
     "id": 6,
     "label": "SwiperJs",
     "img": "logo-swiper.png",
-    "isLast": true
+    "isLast": true,
+    "width": 60
   },
   {
     "id": 7,
     "label": "Bootstrap",
     "img": "logo-bootstrap.png",
-    "title": "CSS Framework"
+    "title": "CSS Framework",
+    "width": 75
   },
   {
     "id": 8,
     "label": "Tailwind",
-    "img": "logo-tailwind.png"
+    "img": "logo-tailwind.png",
+    "width": 99
   },
   {
     "id": 9,
     "label": "Sass",
-    "img": "logo-sass.png"
+    "img": "logo-sass.png",
+    "width": 80
   },
   {
     "id": 10,
     "label": "Less",
     "img": "logo-less.png",
-    "isLast": true
+    "isLast": true,
+    "width": 140
   },
   {
     "id": 11,
     "label": "Wordpress",
-    "img": "logo-wordpress.png"
+    "img": "logo-wordpress.png",
+    "width": 60
   },
   {
     "id": 12,
     "label": "Joomla",
-    "img": "logo-joomla.png"
+    "img": "logo-joomla.png",
+    "width": 60
   },
   {
     "id": 13,
     "label": "Duda",
-    "img": "logo-duda.png"
+    "img": "logo-duda.png",
+    "width": 60
   },
   {
     "id": 14,
     "label": "WiX",
     "img": "logo-wix.png",
-    "isLast": true
+    "isLast": true,
+    "width": 60
   },
   {
     "id": 15,
     "label": "Browserstack",
-    "img": "logo-browserstack.png"
+    "img": "logo-browserstack.png",
+    "width": 60
   },
   {
     "id": 16,
     "label": "LambdaTest",
     "img": "logo-lambdatest.png",
-    "isLast": true
+    "isLast": true,
+    "width": 60
   },
   {
     "id": 17,
     "label": "Yarn",
-    "img": "logo-yarn.png"
+    "img": "logo-yarn.png",
+    "width": 60
   },
   {
     "id": 18,
     "label": "Gulp",
-    "img": "logo-gulp.png"
+    "img": "logo-gulp.png",
+    "width": 27
   },
   {
     "id": 19,
     "label": "Grunt",
     "img": "logo-grunt.png",
-    "isLast": true
+    "isLast": true,
+    "width": 60
   },
   {
     "id": 20,
     "label": "Adobe Photoshop",
-    "img": "logo-photoshop.png"
+    "img": "logo-photoshop.png",
+    "width": 62
   },
   {
     "id": 21,
     "label": "Adobe XD",
-    "img": "logo-xd.png"
+    "img": "logo-xd.png",
+    "width": 62
   },
   {
     "id": 22,
     "label": "Figma",
     "img": "logo-figma.png",
-    "isLast": true
+    "isLast": true,
+    "width": 40
   },
   {
     "id": 23,
     "label": "Xampp",
-    "img": "logo-xampp.png"
+    "img": "logo-xampp.png",
+    "width": 60
   },
   {
     "id": 24,
     "label": "Docker",
     "img": "logo-docker.png",
-    "isLast": true
+    "isLast": true,
+    "width": 63
   },
   {
     "id": 25,
     "label": "Git",
-    "img": "logo-git.png"
+    "img": "logo-git.png",
+    "width": 60
   },
   {
     "id": 26,
     "label": "SVN",
-    "img": "logo-svn.png"
+    "img": "logo-svn.png",
+    "width": 82
   },
   {
     "id": 27,
     "label": "Tortoise Git/Svn",
-    "img": "logo-tortoise.png"
+    "img": "logo-tortoise.png",
+    "width": 108
   },
   {
     "id": 28,
     "label": "Sourcetree",
     "img": "logo-sourcetree.png",
-    "isLast": true
+    "isLast": true,
+    "width": 60
   },
   {
     "id": 29,
     "label": "Jira",
-    "img": "logo-jira.png"
+    "img": "logo-jira.png",
+    "width": 57
   },
   {
     "id": 30,
     "label": "ClickUp",
-    "img": "logo-clickup.png"
+    "img": "logo-clickup.png",
+    "width": 60
   },
   {
     "id": 31,
     "label": "Trello",
-    "img": "logo-trello.png"
+    "img": "logo-trello.png",
+    "width": 60
   },
   {
     "id": 32,
     "label": "Asana",
-    "img": "logo-asana.png"
+    "img": "logo-asana.png",
+    "width": 65
   },
   {
     "id": 33,
     "label": "Bitrix24",
     "img": "logo-bitrix.png",
-    "isLast": true
+    "isLast": true,
+    "width": 60
   },
   {
     "id": 34,
     "label": "Slack",
-    "img": "logo-slack.png"
+    "img": "logo-slack.png",
+    "width": 60
   },
   {
     "id": 35,
     "label": "Skype",
-    "img": "logo-skype.png"
+    "img": "logo-skype.png",
+    "width": 60
   },
   {
     "id": 36,
     "label": "WhatsApp",
-    "img": "logo-whatsapp.png"
+    "img": "logo-whatsapp.png",
+    "width": 59
   },
   {
     "id": 37,
     "label": "Hangouts",
-    "img": "logo-hangouts.png"
+    "img": "logo-hangouts.png",
+    "width": 52
   },
   {
     "id": 38,
     "label": "Discord",
     "img": "logo-discord.png",
-    "isLast": true
+    "isLast": true,
+    "width": 79
   },
   {
     "id": 39,
     "label": "Visual Studio",
-    "img": "logo-visual-studio.png"
+    "img": "logo-visual-studio.png",
+    "width": 60
   },
   {
     "id": 40,
     "label": "Sublime",
-    "img": "logo-sublime.png"
+    "img": "logo-sublime.png",
+    "width": 60
   },
   {
     "id": 41,
     "label": "Atom",
-    "img": "logo-atom.png"
+    "img": "logo-atom.png",
+    "width": 60
   },
   {
     "id": 42,
     "label": "Notepad++",
     "img": "logo-notepad.png",
-    "isLast": true
+    "isLast": true,
+    "width": 74
   },
   {
     "id": 43,
     "label": "NoMachine Service",
-    "img": "logo-nomachine.png"
+    "img": "logo-nomachine.png",
+    "width": 60
   },
   {
     "id": 44,
     "label": "Tizen Studio",
-    "img": "logo-tizen.png"
+    "img": "logo-tizen.png",
+    "width": 60
   },
   {
     "id": 45,
     "label": "Sony Vegas",
     "img": "logo-vegas.png",
-    "isLast": true
+    "isLast": true,
+    "width": 60
   }
 ]

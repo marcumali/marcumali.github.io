@@ -20,7 +20,7 @@ const ContentABout: React.FC<Props> = ({ className }: Props) => {
               <Image src="workspace.jpg" alt="Marc Umali" width={771} height={593} fluid/>
             </Col>
             <Col lg={6}>
-              <div className="text-center text-white maxw-490px mx-auto px-5">
+              <div className="text-center text-white maxw-490px mx-auto px-5 px-md-0">
                 <div className="text-primary fs-26px fw-800 mb-3">ABOUT ME</div>
                 <div>Allow me to introduce myself. I'm Marc Umali, a professional front-end developer and UIX designer based in Manila, Philippines.</div>
                 <Divider className="bg-white mx-auto mt-3 mb-5" />

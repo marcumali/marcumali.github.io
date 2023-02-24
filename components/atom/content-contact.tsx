@@ -37,7 +37,7 @@ const ContentContact: React.FC<Props> = ({ className }: Props) => {
             <Input label="Your Name" name="from_name" />
             <Input label="Your Email" name="user_email" type="email" />
             <Form.Group className="mb-3">
-              <Form.Label className="text-gray-5">Your Message</Form.Label>
+              <Form.Label for="message" className="text-gray-5">Your Message</Form.Label>
               <Form.Control as="textarea" name="message" required></Form.Control>
             </Form.Group>
             <Button type="submit" variant="dark">Send</Button>

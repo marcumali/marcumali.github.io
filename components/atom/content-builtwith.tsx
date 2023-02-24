@@ -10,7 +10,7 @@ const ContentBuiltWith: React.FC<Props> = ({ className }: Props) => {
             <Icon icon="carbon:tools" className="fs-40px text-primary" />
           </div>
         </div>
-        <div className="fs-20px w-160px">These pages was built with</div>
+        <div className="fs-20px w-140px">This page was built with</div>
       </div>
       <div className="d-flex flex-column flex-xl-row lh-1 align-items-center">
         <div className="d-flex flex-column flex-sm-row align-items-center">

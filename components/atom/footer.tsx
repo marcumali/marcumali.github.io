@@ -9,7 +9,7 @@ const Footer: React.FC<Props> = ({ className }: Props) => {
     {
       id: 0,
       label: 'Web Tools',
-      link: '#'
+      link: 'https://github.com/marcumali/wiki-css'
     }
   ];
 

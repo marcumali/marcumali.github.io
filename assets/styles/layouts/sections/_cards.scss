@@ -1,0 +1,280 @@
+.card{
+
+    &-image{
+        @include border-radius( 20px );
+
+        padding-top: 56%;
+
+        @include media-min( $screen-sm ){
+            height: 260px;
+            padding-top: 0;
+        }
+
+    }
+
+    &-casing{
+        display: table;
+        width: 100%;
+
+        position: relative;
+
+        &.is-open{
+
+            .card-item{
+
+                @include media-min( $screen-sm ){
+                    @include opacity( 0.1 );
+
+                    pointer-events: none;
+                }
+
+                &.is-active{
+
+                    @include media-min( $screen-sm ){
+                        @include opacity( 1 );
+
+                        pointer-events: auto;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    &-watermark{
+        display: none;
+
+        @include media-min( $screen-sm ){
+            @include opacity( 0 );
+
+            color: $primary-color;
+            display: block;
+            font-size: 5rem;
+            font-weight: 700;
+            letter-spacing: 15px;
+            white-space: nowrap;
+
+            bottom: 110px;
+            left: 200px;
+            position: absolute;
+            z-index: 1;
+        }
+
+        @include media-min( $screen-md ){
+            font-size: 7rem;
+        }
+
+        @include media-min( $screen-lg ){
+            font-size: 10rem;
+        }
+
+    }
+
+
+    &-item{
+        display: table;
+        margin-bottom: 40px;
+
+        position: relative;
+
+        @include media-min( $screen-sm ){
+            margin-bottom: 60px;
+        }
+
+        &.is-active{
+
+            .card-watermark{
+                @include opacity( .1 );
+
+                letter-spacing: -10px;
+
+                left: 45px;
+            }
+
+        }
+
+    }
+
+    .is-featured{
+        width: 100%;
+
+        .card-image{
+            padding-top: 56%;
+
+            @include media-min( $screen-sm ){
+                height: 400px;
+                padding-top: 0;
+            }
+
+        }
+
+    }
+
+    &-content{
+        display: none;
+
+        @include media-min( $screen-sm ){
+            position: absolute;
+            z-index: 11;
+        }
+
+        &-description{
+
+            .h5{
+                margin-bottom: 0;
+            }
+
+            span{
+                @include border-radius( 30px );
+
+                background-color: $secondary-color;
+                display: inline-block;
+                font-size: 1.4rem;
+                margin: 5px 2.5px;
+                padding: 5px 20px;
+            }
+
+        }
+
+        &-more{
+            @include opacity( 0 );
+
+            height: 0;
+            overflow: hidden;
+
+            &,
+            &-inner{
+                width: 100%;
+                display: inline-block;
+            }
+
+            &.is-show{
+                @include opacity( 1 );
+            }
+
+            &.is-normalize{
+                height: auto!important;
+                overflow: visible;
+            }
+
+        }
+
+    }
+
+    &-title{
+        font-weight: 600;
+        margin-bottom: 0;
+    }
+
+    &-header{
+        position: relative;
+    }
+
+    &-btn{
+        cursor: pointer;
+        display: inline-block;
+        font-size: 1.6rem;
+        margin-top: 10px;
+        padding-left: 45px;
+
+        position: relative;
+
+        &:before,
+        &:after{
+            @include transition( all,0.3s );
+            @include vertical-align( absolute );
+
+            content: '';
+        }
+
+        &:before{
+            @include border-radius( 50% );
+
+            border: 2px solid $secondary-color;
+            height: 25px;
+            width: 25px;
+
+            left: 0;
+        }
+
+        &:after{
+            background-color: $secondary-color;
+
+            height: 2px;
+            width: 20px;
+
+            left: 18px;
+        }
+
+        @include media-min( $screen-sm ){
+
+            &:hover{
+
+                &:before{
+                    height: 10px;
+                    margin-top: 1px;
+                    width: 10px;
+
+                    left: 6px;
+                }
+
+                &:after{
+                    @include transform( rotate( 180deg ) );
+                }
+
+            }
+
+        }
+
+        &.is-last{
+            @include opacity( 0 );
+            margin-left: 0;
+        }
+
+        &-actions.show-button{
+            .card-btn.is-last{
+                @include opacity( 1 );
+
+                margin-left: 3px;
+            }
+        }
+
+    }
+
+    &-footer{
+        display: inline-block;
+
+        position: relative;
+
+        &.is-show{
+
+            .card-footer-text{
+                margin-top: 0;
+            }
+
+        }
+
+    }
+
+    &-footer-text{
+        margin-top: 70px;
+        padding: 0 20px;
+
+        @include media-min( $screen-sm ){
+            padding: 0 100px;
+        }
+
+    }
+
+    &-load-more{
+        width: 100%;
+
+        left: 0;
+        position: absolute;
+        top: 0;
+    }
+
+}

@@ -1,0 +1,35 @@
+{
+	"dependencies": {
+		"main.js": {
+			"files": [
+				"scripts/main.js",
+				"scripts/browser.js",
+				"scripts/banner.js",
+				"scripts/animation.js",
+				"scripts/reveal.js",
+				"scripts/instagram.js",
+				"scripts/back-to-top.js",
+				"scripts/navigation.js",
+				"scripts/defer.js"
+			],
+			"main": true
+		},
+		"main.css": {
+			"files": [
+				"styles/main.scss"
+			],
+			"main": true
+		},
+		"main-critical.css": {
+			"files": [
+				"styles/main-critical.scss"
+			]
+	    },
+		"jquery.js": {
+			"bower": ["jquery"]
+		}
+	},
+	"config": {
+		"devUrl": "http://dev.www.marcumali.stage"
+	}
+}

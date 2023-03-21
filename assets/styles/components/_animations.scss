@@ -1,0 +1,10 @@
+.parallax-background{
+
+    background-size: cover;
+    background-position: center;
+
+    @include media-min( $screen-sm ){
+        background-attachment: fixed;
+    }
+
+}

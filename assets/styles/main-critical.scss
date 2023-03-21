@@ -1,0 +1,20 @@
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/grid";
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/normalize";
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/carousel";
+
+@import "common/variables";
+@import "common/mixins";
+@import "common/typography";
+@import "common/global";
+
+.critical{
+    @import "critical/carousel";
+    @import "critical/navigation";
+    @import "critical/typography";
+    @import "critical/header-banner";
+    @import "critical/buttons";
+}
+
+@import "components/navigation";
